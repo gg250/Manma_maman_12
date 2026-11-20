@@ -7,5 +7,5 @@ class RunResult:
     nanoseconds: int
 
     @property
-    def complexity() -> str:
-        pass
+    def complexity(self) -> str:
+        return self.comparisons + self.writes
