@@ -1,5 +1,5 @@
-from black_box import run
-from list_creator import ListCreator
+from src.black_box import run
+from src.list_creator import ListCreator
 
 ARRAY_LENGTHS = [128, 256, 512, 1024, 2048, 4096]
 ALGORITHM_TYPES = ['A', 'B', 'C', 'D']
@@ -12,5 +12,7 @@ def run_random_ordered_array_benchmark():
             data_array = ListCreator.create_random_ordered_array()
             result = run(algorithm_type, data_array)
             execution_times.append()
+
+    return 
 
 def calculate_random_ordered_array_parameters(algorithm_type: str, array_length: int) -> dict:

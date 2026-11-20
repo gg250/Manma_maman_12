@@ -43,11 +43,11 @@ class ListCreator:
         return [n] * n
 
     @staticmethod
-    def create_partial_sorted_array(n: int) -> List[int]:
+    def create_partial_sorted_array(n: int, seed: int) -> List[int]:
         """
         This function creates an array which contains floor(n/20) sequential pairs shuffled.
         """
-        random.seed(ListCreator.RANDOM_SEED)
+        random.seed(seed)
         # Since we use indexes to find the start the start of each pair, the array length we use for calculations should be even
         pairs_amount = math.floor(n/20)
         pairs_order_array = ListCreator.PAIR_LETTER * pairs_amount + ListCreator.EMPTY_PAIR_LETTER * ((n/2) - pairs_amount)
