@@ -4,19 +4,20 @@ import random
 from typing import List
 
 class ListCreator:
-    RANDOM_SEED = 11
     PAIR_LETTER = 'P'
     EMPTY_PAIR_LETTER = 'E'
 
-    def create_random_ordered_array(n: int) -> List[int]:
+    @staticmethod
+    def create_random_ordered_array(n: int, seed: int) -> List[int]:
         """
         This function creates a random ordered array by the size of n elemnts.
         """
-        random.seed(ListCreator.RANDOM_SEED)
+        random.seed(seed)
         numbers_array = list(range(1,n+1))
         random.shuffle(numbers_array)
         return numbers_array
 
+    @staticmethod
     def create_increasing_array(n: int) -> List[int]:
         """
         This function creates a sorted array in increasing order 
@@ -25,6 +26,7 @@ class ListCreator:
         # This used to validate that the returned list will be sorted in increasing manner
         return sorted(numbers_array)
 
+    @staticmethod
     def create_decreasing_array(n: int) -> List[int]:
         """
         This function creates a sorted array in decreasing order 
@@ -33,12 +35,14 @@ class ListCreator:
         # This used to validate that the returned list will be sorted in decreasing manner
         return sorted(numbers_array, reverse=True)
 
+    @staticmethod
     def create_equal_numbers_array(n: int) -> List[int]:
         """
         This function creates an array which all of the elements are equal to n.
         """
         return [n] * n
-   
+
+    @staticmethod
     def create_partial_sorted_array(n: int) -> List[int]:
         """
         This function creates an array which contains floor(n/20) sequential pairs shuffled.
