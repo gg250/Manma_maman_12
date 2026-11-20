@@ -1,6 +1,6 @@
 import random
 
-from typing import Dict
+from typing import Dict, List
 from statistics import mean
 
 from src.models.run_result import RunResult
