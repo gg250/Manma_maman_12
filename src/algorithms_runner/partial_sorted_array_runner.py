@@ -1,13 +1,15 @@
 import random
 import math
 
+from typing import List
+
 from src.algorithm_runner.random_array_runner import RandomArrayRunner
 
 class PartialSortedArrayRunner(RandomArrayRunner):
     PAIR_LETTER = 'P'
     EMPTY_PAIR_LETTER = 'E'
     
-    def _create_array(n, seed):
+    def _create_array(self, n: int, seed: int) -> List[int]:
         """
         This function creates an array which contains floor(n/20) sequential pairs shuffled.
         """
