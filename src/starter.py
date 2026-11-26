@@ -1,4 +1,4 @@
-from black_box import run
+from src.black_box import run
 
 
 data = [9, 3, 7, 1, 8, 2, 6]
