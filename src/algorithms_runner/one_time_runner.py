@@ -9,7 +9,7 @@ class OneTimeRunner(AlgorithmsRunner):
     def run_algorithms(self, input_length: int) -> Dict[str, RunResult]:
             run_results = dict()
             for algorithm_type in self.ALGORITHM_TYPES:
-                run_results.update({algorithm_type: self.run_algorithm(algorithm_type, input_length)})
+                run_results.update({algorithm_type: self._run_algorithm(algorithm_type, input_length)})
     
             return run_results
 
